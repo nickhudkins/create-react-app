@@ -263,7 +263,7 @@ module.exports = {
                 extends: [require.resolve('eslint-config-react-app')],
                 settings: { react: { version: '999.999.999' } },
               },
-              ignore: false,
+              ignore: true,
               useEslintrc: false,
               // @remove-on-eject-end
             },
@@ -299,7 +299,7 @@ module.exports = {
                 'babel-preset-react-app/webpack-overrides'
               ),
               // @remove-on-eject-begin
-              babelrc: false,
+              babelrc: true,
               configFile: false,
               presets: [require.resolve('babel-preset-react-app')],
               // Make sure we have a unique cache identifier, erring on the
@@ -339,7 +339,7 @@ module.exports = {
             exclude: /@babel(?:\/|\\{1,2})runtime/,
             loader: require.resolve('babel-loader'),
             options: {
-              babelrc: false,
+              babelrc: true,
               configFile: false,
               compact: false,
               presets: [
