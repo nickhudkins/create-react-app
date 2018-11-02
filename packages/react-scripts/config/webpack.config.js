@@ -395,6 +395,12 @@ module.exports = function (webpackEnv) {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },
+            //fixes an awful thing that happens
+            {
+              test: /\.mjs$/,
+              include: /node_modules/,
+              type: 'javascript/auto',
+            },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
             {
@@ -427,6 +433,11 @@ module.exports = function (webpackEnv) {
                 ),
                 // @remove-on-eject-end
                 plugins: [
+                  // @start-custom-ua-plugins
+                  require.resolve('babel-plugin-ramda'),
+                  require.resolve('babel-plugin-styled-components'),
+                  require.resolve('@babel/plugin-proposal-optional-chaining'),
+                  // @end-custom-ua-plugins
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {

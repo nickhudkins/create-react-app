@@ -1,6 +1,6 @@
 {
-  "name": "react-scripts",
-  "version": "3.4.1",
+  "name": "@nickhudkins/react-scripts",
+  "version": "3.4.1-alpha.2",
   "description": "Configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "types": "./lib/react-app.d.ts",
   "dependencies": {
     "@babel/core": "7.10.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.1",
     "@svgr/webpack": "5.4.0",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
@@ -37,6 +38,8 @@
     "babel-jest": "^26.0.1",
     "babel-loader": "8.1.0",
     "babel-plugin-named-asset-import": "^0.3.6",
+    "babel-plugin-ramda": "^1.6.3",
+    "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-react-app": "^9.1.2",
     "bfj": "^7.0.2",
     "camelcase": "^6.0.0",
